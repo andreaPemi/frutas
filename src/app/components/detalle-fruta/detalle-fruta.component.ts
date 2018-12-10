@@ -39,10 +39,11 @@ export class DetalleFrutaComponent implements OnInit {
        this.frutaService.getById(this.id).subscribe(data => {
         console.log("fruta Data subscrita:"+data);
         if(data != undefined){
+          //cargamos formulario con datos del objeto
           this.formulario.controls.nombre.setValue(data.nombre);
           this.formulario.controls.precio.setValue(data.precio);
           this.formulario.controls.calorias.setValue(data.calorias);
-       // this.formulario.controls.colores.setValue(data.colores);
+          this.formulario.controls.colores.setValue(data.colores);
           this.formulario.controls.oferta.setValue(data.oferta);
           this.formulario.controls.descuento.setValue(data.descuento);
           this.formulario.controls.imagen.setValue(data.imagen);
@@ -51,6 +52,7 @@ export class DetalleFrutaComponent implements OnInit {
         
       });
       }else{
+        //formulario por defecto
         this.vaciarCamposForm();
       }
      

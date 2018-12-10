@@ -39,11 +39,18 @@
       "id": 1
     },
     {
-      "nombre": "nueva fruta",
+      "nombre": "alcaparras",
       "precio": 4.3,
       "calorias": 54,
       "colores": [
-        []
+        [
+          {
+            "color": "morado"
+          },
+          {
+            "color": "verde"
+          }
+        ]
       ],
       "oferta": false,
       "descuento": 5,
@@ -75,23 +82,20 @@
       "id": 7
     },
     {
-      "nombre": "SSSSSSSS",
+      "nombre": "puerro",
       "precio": 3.15,
       "calorias": 500,
       "colores": [
         [
           {
-            "color": "purple"
-          },
-          {
-            "color": "amarillo"
+            "color": "morado"
           }
         ]
       ],
-      "oferta": true,
-      "descuento": 20,
-      "imagen": "https://nutriliving-images.imgix.net/images/2014/335/12907/C07BEDA0-8F79-E411-A121-0287E8A1303A.jpg",
-      "cantidad": 3,
+      "oferta": false,
+      "descuento": 5,
+      "imagen": "https://miIagen.jpg",
+      "cantidad": 1,
       "id": 8
     }
   ]

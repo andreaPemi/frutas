@@ -18,14 +18,7 @@ export class CrudFrutaComponent implements OnInit {
 
   ngOnInit() {
     //listar
-    this.cargarLista();
-
-    //Ir detalle    
-    this.route.params.subscribe(params => {
-     let id = +params['id']; // (+) converts string 'id' to a number
-      // llamar provider para conseguir datos a traves del id
-
-   });
+    this.cargarLista();    
   }
 
   cargarLista(){
