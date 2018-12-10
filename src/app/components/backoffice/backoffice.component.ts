@@ -17,6 +17,6 @@ export class BackofficeComponent implements OnInit {
 
   cerrar() {
     this.loginService.logout();
-    this.router.navigate(['login']);
+    this.router.navigate(['comparador']);
   }
 }

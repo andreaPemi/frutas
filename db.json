@@ -34,23 +34,9 @@
       ],
       "oferta": true,
       "descuento": 20,
-      "imagen": "https://nutriliving-images.imgix.net/images/2014/335/12907/C07BEDA0-8F79-E411-A121-0287E8A1303A.jpg?ch=DPR&w=488&h=488&auto=compress,format&dpr=1",
+      "imagen": "https://nutriliving-images.imgix.net/images/2014/335/12907/C07BEDA0-8F79-E411-A121-0287E8A1303A.jpg",
       "cantidad": 1,
       "id": 1
-    },
-    {
-      "id": 5,
-      "nombre": "Limon",
-      "precio": 0.8,
-      "calorias": 0.35,
-      "colores": [
-        "amarillo",
-        "verde"
-      ],
-      "oferta": true,
-      "descuento": 10,
-      "imagen": "https://www.hogarmania.com/archivos/201308/limon-xl-668x400x80xX.jpg",
-      "cantidad": 1
     },
     {
       "nombre": "nueva fruta",
@@ -64,6 +50,29 @@
       "imagen": "https://www.catalunyaplants.com/wp-content/uploads/2013/08/alcaparras-detalle.jpg",
       "cantidad": 3,
       "id": 6
+    },
+    {
+      "nombre": "fresa",
+      "precio": 3.15,
+      "calorias": 500,
+      "colores": [
+        [
+          {
+            "color": "rojo"
+          },
+          {
+            "color": "rosa"
+          },
+          {
+            "color": "verde"
+          }
+        ]
+      ],
+      "oferta": false,
+      "descuento": 0,
+      "imagen": "https://libbys.es/wordpress/wp-content/uploads/2018/05/fresas.jpg",
+      "cantidad": 1,
+      "id": 7
     }
   ]
 }

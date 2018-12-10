@@ -1,27 +1,17 @@
-<h2>Acceso privado</h2>
-<!--<div class="col">
-  <p>Valores: {{formulario.value | json}}</p>
-  <p>Estado:{{formulario.status |json}}</p>
-</div>
-<-->
-<p>usuario de prueba</p>
-<ul>
-  <li><b>nombre=admin</b></li>
-  <li><b>password=12345678</b></li>
-</ul>
-<p>{{mensaje}}</p>
-<form [formGroup]="formulario" novalidate class="mt-4" (ngSubmit)="sumitar()">
-  <div class="col form-group">
-    <div class="col-6">
-      <input type="text" class="form-control" formControlName="nombre" placeholder="Min 2 max 25 caracteres">
-      <small *ngIf="formulario.controls.nombre.invalid && formulario.controls.nombre.touched" class="form-text text-danger">Min 2 max 50 caracteres</small>
-      <small *ngIf="formulario.controls.nombre.valid"class="form-text text-success">Correcto</small>
-    </div>
-    <div class="col-6">    
-      <input type="text" class="form-control" formControlName="password" placeholder="Min 6 max 25 caracteres">
-      <small *ngIf="formulario.controls.nombre.invalid && formulario.controls.nombre.touched" class="form-text text-danger">Min 6 max 25 caracteres</small>
-      <small *ngIf="formulario.controls.nombre.valid"class="form-text text-success">Correcto</small>
-    </div>
+<form class="form-inline" [formGroup]="formulario"novalidate (ngSubmit)="sumitar()">
+  <div class="form-group">
+    <label class="sr-only">Nombre</label>
+    <input type="text" formControlName="nombre" class="form-control input-sm" placeholder="nombre de usuario">
   </div>
-<input type="submit" class="btn btn-outline-success btn-block text-dark" [disabled]="formulario.status==='INVALID'" value="Entrar">
+  <div class="form-group">  
+    <label class="sr-only" for="password">Contraseña</label>
+    <input type="password" formControlName="password" class="form-control input-sm" placeholder="Contraseña "></div>
+    <button type="submit" class="btn btn-info btn-xs">Entrar</button>          
 </form>
+<!--Alert -->
+<div *ngIf="mensaje" class="alert alert-warning alert-dismissible fade show" role="alert">
+  {{mensaje}} 
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  </div>

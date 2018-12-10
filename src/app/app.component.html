@@ -1,47 +1,37 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-    <a class="navbar-brand" href="#">ANGULAR</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">      
-        <li><a class="nav-link" routerLink="comparador" >Comparador de frutas</a></li>
-        <li><a class="nav-link" routerLink="fruta-crud">crud Fruta </a></li>
-        <li><a class="nav-link" [routerLink]="['../detalle', -1]">Detalle Fruta</a></li>
-    
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Guards
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="nav-link text-danger" routerLink="privado" >Zona privada</a>
-            <a class="nav-link text-danger" routerLink="login" >login</a>
-       </div>        
-      </li>
-      </ul>      
-    </div>
-<!-- Login Usuario-->
+  <a class="navbar-brand" href="#">ANGULAR</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li>
+        <a class="nav-link" routerLink="comparador">Inicio</a>
+      </li>     
 
-llamar componetnte login
-<!--
-       <form class="form-inline" [formGroup]="formulario"novalidate (ngSubmit)="sumitar()">
-       <div class="form-group">
-           <label class="sr-only">Nombre</label>
-           <input type="text" formControlName="nombre" class="form-control input-sm" placeholder="nombre de usuario">
-       </div>
-        <div class="form-group">  
-         <label class="sr-only" for="password">Contraseña</label>
-         <input type="password" formControlName="password" class="form-control input-sm" placeholder="Contraseña "></div>
-         <button type="submit" class="btn btn-info btn-xs">Entrar</button>          
-        </form>
+      <!--Mostrar zonas privada si esta logueado-->
+      <div class="dropdown">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          Zona Privada
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" routerLink="fruta-crud">Listar fruta</a>
+          <a class="dropdown-item" [routerLink]="['../detalle', -1]">Detalle fruta</a>
+        </div>
+      </div>
+      <!-- end privado-->
+    </ul>
+  </div>
 
--->
+  <!-- Login Usuario-->
+  <app-login></app-login>
 
-  </nav>
+</nav>
 
 <!-- Encargado de cambiar cada componente en funcion de la ruta-->
 <div class="container">
-    <router-outlet></router-outlet>  
+  <router-outlet></router-outlet>
 </div>
