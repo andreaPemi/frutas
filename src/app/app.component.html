@@ -1,5 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-  <a class="navbar-brand" href="#">ANGULAR</a>
+  <a class="navbar-brand" routerLink="comparador"><img width="300" alt="Angular Logo" src="  http://download.seaicons.com/icons/graphicloads/medical-health/256/heart-beat-2-icon.png">
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -13,7 +14,7 @@
 
       <!--Mostrar zonas privada si esta logueado-->
       <div class="dropdown">
-        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+        <button [disabled]="!logueado()" class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false">
           Zona Privada
         </button>
@@ -23,12 +24,15 @@
         </div>
       </div>
       <!-- end privado-->
+          
     </ul>
   </div>
 
   <!-- Login Usuario-->
   <app-login></app-login>
-
+  <div *ngIf="logueado()">
+      <a class="nav-link" (click)="cerrar()">Cerrar Sesion</a>
+    </div>  
 </nav>
 
 <!-- Encargado de cambiar cada componente en funcion de la ruta-->
