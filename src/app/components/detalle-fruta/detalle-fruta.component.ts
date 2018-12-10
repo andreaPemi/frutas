@@ -34,7 +34,8 @@ export class DetalleFrutaComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.id = +params['id']; // (+) converts string 'id' to a number
       
-      // llamar provider para conseguir datos a traves del id
+      if(this.id>=1){
+         // llamar provider para conseguir datos a traves del id
        this.frutaService.getById(this.id).subscribe(data => {
         console.log("fruta Data subscrita:"+data);
         if(data != undefined){
@@ -49,6 +50,10 @@ export class DetalleFrutaComponent implements OnInit {
         }
         
       });
+      }else{
+        this.vaciarCamposForm();
+      }
+     
    });     
   }
 

@@ -73,6 +73,26 @@
       "imagen": "https://libbys.es/wordpress/wp-content/uploads/2018/05/fresas.jpg",
       "cantidad": 1,
       "id": 7
+    },
+    {
+      "nombre": "SSSSSSSS",
+      "precio": 3.15,
+      "calorias": 500,
+      "colores": [
+        [
+          {
+            "color": "purple"
+          },
+          {
+            "color": "amarillo"
+          }
+        ]
+      ],
+      "oferta": true,
+      "descuento": 20,
+      "imagen": "https://nutriliving-images.imgix.net/images/2014/335/12907/C07BEDA0-8F79-E411-A121-0287E8A1303A.jpg",
+      "cantidad": 3,
+      "id": 8
     }
   ]
 }
