@@ -1,44 +1,43 @@
 <div class="row">
+    <h2 class=" col text-center mb-4">COMPARADOR DE FRUTAS</h2>
+</div>
 
-  <p class="text-right">COMPARADOR DE FRUTAS</p>
-  <div class="card_fruta">
+<div class="row">
+  <div class="col-2">
+    <ul class="list-group">
+      <h3 class="text-center">Listado frutas</h3>
+      <!--Se selecciona las 2 frutas a comparar-->
+      <li *ngFor="let f of frutas" (click)="cargarFruta(f)" class="list-group-item" [class.active]="f == f1 || f == f2">{{f.nombre}}</li>
+    </ul>
+  </div>
 
-    <div class="row">
-      <div class="col-3">
-        <ul class="list-group">
-          <h1 class="text-center">Listado frutas</h1>
-          <!--Se selecciona las 2 frutas a comparar-->
-          <li *ngFor="let f of frutas" (click)="cargarFruta(f)" class="list-group-item" [class.active]="f == f1 || f == f2">{{f.nombre}}</li>
-        </ul>
-      </div>
+  <div class="col col-4"> 
+    <app-fruta-card [_fruta]="f1" [_fruta2]="f2" (clickCompra)="actualizarCarro($event)"></app-fruta-card>
+  </div>
 
-      <div class="col-3 mr-2">
-        <app-fruta-card [_fruta]="f1" [_fruta2]="f2" (clickCompra)="actualizarCarro($event)"></app-fruta-card>
-      </div>
-      <div class="col-3">
-        <app-fruta-card [_fruta]="f2" [_fruta2]="f1" (clickCompra)="actualizarCarro($event)"></app-fruta-card>
-      </div>
+  <div class="col col-4">
+    <app-fruta-card [_fruta]="f2" [_fruta2]="f1" (clickCompra)="actualizarCarro($event)"></app-fruta-card>
+  </div>
 
-      <div class="col">
-        <div class="card" style="width: 14rem;">
+  <div class="col col-2">
+      <div class="card" style="width: 14rem;">
           <div class="card-header">
             <p class="card-text">
-              <b>
-                <i class="fas fa-shopping-cart mr-3"></i> TOTAL: {{totalCompra | number:'1.2-2'}} &euro;</b>
+              <b><i class="fas fa-shopping-cart mr-3"></i> TOTAL: {{totalCompra | number:'1.2-2'}} &euro;</b>
             </p>
           </div>
+    
           <div class="card-body">
             <div class="mt-2" *ngFor="let p of productos, let i = index">
-
               <p class="text-center" (click)="eliminarProducto(p,i)">
                 <i class="far fa-trash-alt text-danger" title="eliminar"></i>
                 <b class="ml-2">{{p.nombre}} {{p.precio}}&euro;</b>
               </p>
-
+    
               <p class="card-text">
                 <img class="card-img-top" style="width: 71px;" src="{{p.imagen}}" alt="imagen producto">
               </p>
-
+    
               <div class="row justify-content-center">
                 <div class="col-2">
                   <button class="btn btn-outline-success" type="button" (click)="cantidadSuma(p,i)" title="Añadir producto al carro">
@@ -54,15 +53,17 @@
                   </button>
                 </div>
               </div>
+    
               <hr>
+    
             </div>
-          </div>
-          <!-- end card-body -->
+          </div> <!-- end card-body -->
+          
           <p class="card-text bg-info" *ngIf="totalCompra">
             <b>
               <i class="fas fa-shopping-cart mr-3"></i> TOTAL: {{totalCompra | number:'1.2-2'}} &euro;</b>
           </p>
-
+    
           <div class="row" *ngIf="totalCompra">
             <div class="col col-6">
               <button _ngcontent-c2="" class="btn btn-block btn-outline-success">Confirmar </button>
@@ -72,7 +73,10 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
   </div>
+
+
+
 </div>
+
+
