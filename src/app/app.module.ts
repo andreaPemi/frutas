@@ -24,6 +24,7 @@ import { BackofficeGuard } from './guards/backoffice.guard';
 
 //Pipes
 import { OfertaPipe } from './pipes/oferta.pipe';
+import { BuscadorNombrePipe } from './pipes/buscador-nombre.pipe';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { OfertaPipe } from './pipes/oferta.pipe';
     DetalleFrutaComponent,
     BackofficeComponent,
     LoginComponent,
-    OfertaPipe
+    OfertaPipe,
+    BuscadorNombrePipe
     
   ],
   imports: [

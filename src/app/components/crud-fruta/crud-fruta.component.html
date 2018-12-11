@@ -4,6 +4,12 @@
       <a type="button" class=" col col-4 btn btn-outline-success mb-5" [routerLink]="['../detalle', -1]">Crear Nueva Fruta</a>
   </div>
 
+  <div class="input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="basic-addon1">LUPA</span>
+      </div>
+      <input type="text" [(ngModel)]=nombre>
+    </div>
   
   <table class="table table-bordered text-center table-hover">
     <thead class="thead-dark">
@@ -18,7 +24,7 @@
     </thead>
     <tbody>
        
-      <tr class="table-info" *ngFor="let f of frutas">        
+      <tr class="table-info" *ngFor="let f of frutas | buscadorNombre:nombre">        
         <td>{{f.id}}</td>
         <td><a [routerLink]="['../detalle', f.id ]">{{f.nombre}}</a></td>
         <td>{{f.precio}}</td>
