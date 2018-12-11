@@ -12,8 +12,8 @@ import { FrutaCardComponent } from './components/fruta-card/fruta-card.component
 import { ComparadorComponent } from './components/comparador/comparador.component';
 import { CrudFrutaComponent } from './components/crud-fruta/crud-fruta.component';
 import { DetalleFrutaComponent } from './components/detalle-fruta/detalle-fruta.component';
-import { BackofficeComponent } from './components/backoffice/backoffice.component';
 import { LoginComponent } from './components/login/login.component';
+import { BackofficeComponent } from './components/backoffice/backoffice.component';
 
 //Providers
 import { FrutaService } from './providers/fruta.service';
@@ -21,6 +21,9 @@ import { LoginService } from './providers/login.service';
 
 //Guards
 import { BackofficeGuard } from './guards/backoffice.guard';
+
+//Pipes
+import { OfertaPipe } from './pipes/oferta.pipe';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,8 @@ import { BackofficeGuard } from './guards/backoffice.guard';
     CrudFrutaComponent,
     DetalleFrutaComponent,
     BackofficeComponent,
-    LoginComponent
+    LoginComponent,
+    OfertaPipe
     
   ],
   imports: [

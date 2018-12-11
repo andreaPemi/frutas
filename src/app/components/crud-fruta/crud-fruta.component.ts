@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FrutaService } from 'src/app/providers/fruta.service';
-import { Fruta } from 'src/app/model/fruta';
+import { FrutaService } from '../../providers/fruta.service';
+import { Fruta } from '../../model/fruta';
 import { FormGroup, FormControl, Validators,FormArray } from '@angular/forms';
-import { ActivatedRoute } from '../../../../node_modules/@angular/router';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-crud-fruta',
   templateUrl: './crud-fruta.component.html',

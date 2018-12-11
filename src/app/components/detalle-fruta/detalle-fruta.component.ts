@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { FrutaService } from 'src/app/providers/fruta.service';
-import { Fruta } from 'src/app/model/fruta';
+import { FrutaService } from '../../providers/fruta.service';
+import { Fruta } from '../../model/fruta';
 import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
 @Component({
   selector: 'app-detalle-fruta',

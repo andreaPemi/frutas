@@ -8,6 +8,8 @@ import { FrutaService } from '../../providers/fruta.service';
   styleUrls: ['./comparador.component.scss']
 })
 export class ComparadorComponent implements OnInit {
+  todas:boolean;
+  textoFiltro:string;
 
   frutas:Fruta[];
   f1:Fruta;
@@ -34,6 +36,9 @@ export class ComparadorComponent implements OnInit {
     this.frutaCompra=new Fruta();
     this.frutaBuscar=new Fruta();
     this.cant=1;
+
+    this.todas=true;
+    this.textoFiltro="Todas";
    }
 
   ngOnInit() {
@@ -44,6 +49,12 @@ export class ComparadorComponent implements OnInit {
       this.f1=this.frutas[0];
     this.f2=this.frutas[1];
     })
+  }
+
+  filtrar(){    
+    this.todas =!this.todas;
+    console.log("ComparadorComponent todas:" + this.todas);
+    this.textoFiltro=(this.todas)?'Todas':'En Oferta';
   }
 
   cargarFruta(fruta:Fruta){

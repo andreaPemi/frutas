@@ -1,13 +1,13 @@
 <div class="row">
     <h2 class=" col text-center mb-4">COMPARADOR DE FRUTAS</h2>
 </div>
-
+<input (change)="filtrar()" type="checkbox">{{textoFiltro}}
 <div class="row">
   <div class="col-2">
     <ul class="list-group">
       <h3 class="text-center">Listado frutas</h3>
       <!--Se selecciona las 2 frutas a comparar-->
-      <li *ngFor="let f of frutas" (click)="cargarFruta(f)" class="list-group-item" [class.active]="f == f1 || f == f2">{{f.nombre}}</li>
+      <li *ngFor="let f of frutas | oferta: todas" (click)="cargarFruta(f)" class="list-group-item" [class.active]="f == f1 || f == f2">{{f.nombre}}</li>
     </ul>
   </div>
 
