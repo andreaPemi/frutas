@@ -1,7 +1,17 @@
 <div class="row">
     <h2 class=" col text-center mb-4">COMPARADOR DE FRUTAS</h2>
 </div>
-<input (change)="filtrar()" type="checkbox">{{textoFiltro}}
+<div class="col-2 border mb-4">
+<label class="col col-3 text-success">Saber ofertas</label>
+<div class="onoffswitch">  
+    <input (change)="filtrar()" type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+    <label class="onoffswitch-label" for="myonoffswitch">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div>
+</div>
+
 <div class="row">
   <div class="col-2">
     <ul class="list-group">
