@@ -95,18 +95,12 @@ export class ComparadorComponent implements OnInit {
   }
 
   eliminarProducto(p: Fruta, index: number){
-
-
-    this.totalCompra = this.totalCompra - (p.precio * p.cantidad);
-    
-    p.cantidad = 1;
-    
+    this.totalCompra = this.totalCompra - (p.precio * p.cantidad);    
+    p.cantidad = 1;    
     let posicion: number;
     posicion = this.productos.indexOf(p);
 
     this.productos.splice(posicion , 1);
-
-
   }
 
   cancelarCompra(){

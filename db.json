@@ -13,90 +13,19 @@
   ],
   "frutas": [
     {
-      "nombre": "banana",
-      "precio": 3.15,
-      "calorias": 500,
+      "nombre": "uvasssws",
+      "precio": 0.1,
+      "calorias": 1,
       "colores": [
-        [
-          {
-            "color": "amarillo"
-          },
-          {
-            "color": "negro"
-          },
-          {
-            "color": "verde"
-          },
-          {
-            "color": "marron"
-          }
-        ]
+        "purple",
+        "blanco",
+        "morado"
       ],
       "oferta": true,
-      "descuento": 20,
-      "imagen": "https://nutriliving-images.imgix.net/images/2014/335/12907/C07BEDA0-8F79-E411-A121-0287E8A1303A.jpg",
-      "cantidad": 1,
-      "id": 1
-    },
-    {
-      "nombre": "alcaparras",
-      "precio": 4.3,
-      "calorias": 54,
-      "colores": [
-        [
-          {
-            "color": "morado"
-          },
-          {
-            "color": "verde"
-          }
-        ]
-      ],
-      "oferta": false,
       "descuento": 5,
-      "imagen": "https://www.catalunyaplants.com/wp-content/uploads/2013/08/alcaparras-detalle.jpg",
+      "imagen": "http://www.triamax.com/wp-content/uploads/2015/02/uvas.jpg",
       "cantidad": 3,
-      "id": 6
-    },
-    {
-      "nombre": "fresa",
-      "precio": 3.15,
-      "calorias": 500,
-      "colores": [
-        [
-          {
-            "color": "rojo"
-          },
-          {
-            "color": "rosa"
-          },
-          {
-            "color": "verde"
-          }
-        ]
-      ],
-      "oferta": false,
-      "descuento": 0,
-      "imagen": "https://libbys.es/wordpress/wp-content/uploads/2018/05/fresas.jpg",
-      "cantidad": 1,
-      "id": 7
-    },
-    {
-      "nombre": "puerro",
-      "precio": 3.15,
-      "calorias": 500,
-      "colores": [
-        [
-          {
-            "color": "morado"
-          }
-        ]
-      ],
-      "oferta": false,
-      "descuento": 5,
-      "imagen": "https://miIagen.jpg",
-      "cantidad": 1,
-      "id": 8
+      "id": 1
     }
   ]
 }

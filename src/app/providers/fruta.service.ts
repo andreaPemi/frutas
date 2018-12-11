@@ -20,16 +20,21 @@ export class FrutaService {
   } 
   
   add(fruta:Fruta):Observable<any>{
+    let descuento;
+
+    if (!fruta.oferta) {
+      descuento = 0;
+    } else {
+      descuento = fruta.descuento;
+    }
     console.log("add frutaService %o" ,fruta);
     let body = {
       "nombre": fruta.nombre,
       "precio": fruta.precio,
       "calorias": fruta.calorias,
-      "colores": [
-        fruta.colores
-      ],
+      'colores': fruta.colores,
       "oferta": fruta.oferta,
-      "descuento": fruta.descuento,
+      "descuento": descuento,
       "imagen": fruta.imagen,
       "cantidad": fruta.cantidad
     };
@@ -62,15 +67,21 @@ export class FrutaService {
     console.log("Modifcar frutaService %o"+fruta);
     const uri = this.endpoint + '/' + fruta.id;
 
+    let descuento;
+
+    if (!fruta.oferta) {
+      descuento = 0;
+    } else {
+      descuento = fruta.descuento;
+    }
+
     let body = {
       "nombre": fruta.nombre,
       "precio": fruta.precio,
       "calorias": fruta.calorias,
-      "colores": [
-        fruta.colores
-      ],
+      'colores': fruta.colores,
       "oferta": fruta.oferta,
-      "descuento": fruta.descuento,
+      "descuento": descuento,
       "imagen": fruta.imagen,
       "cantidad": fruta.cantidad
     };
