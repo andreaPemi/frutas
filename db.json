@@ -1,31 +1,110 @@
 {
-  "tareas": [
-    {
-      "titulo": "mirar angular 2 materia",
-      "terminado": false,
-      "id": 8
-    },
-    {
-      "titulo": "maquetar",
-      "terminado": false,
-      "id": 9
-    }
-  ],
   "frutas": [
     {
-      "nombre": "uvasssws",
-      "precio": 0.1,
-      "calorias": 1,
+      "nombre": "uva",
+      "precio": 0.6,
+      "calorias": 2,
       "colores": [
-        "purple",
+        "morado",
+        "verde",
+        "marron"
+      ],
+      "oferta": true,
+      "descuento": 15,
+      "imagen": "http://www.triamax.com/wp-content/uploads/2015/02/uvas.jpg",
+      "cantidad": 5,
+      "id": 1
+    },
+    {
+      "nombre": "melocoton",
+      "precio": 45,
+      "calorias": 34,
+      "colores": [
+        "amarillo",
+        "verde",
+        "naranja",
+        "rojo"
+      ],
+      "oferta": true,
+      "descuento": 10,
+      "imagen": "https://www.hogarmania.com/archivos/201305/melocotones-xl-668x400x80xX.jpg",
+      "cantidad": 5,
+      "id": 2
+    },
+    {
+      "nombre": "Melon",
+      "precio": 1,
+      "calorias": 2,
+      "colores": [
         "blanco",
-        "morado"
+        "verde",
+        "marron"
+      ],
+      "oferta": false,
+      "descuento": 0,
+      "imagen": "https://www.webconsultas.com/sites/default/files/styles/encabezado_articulo/public/migrated/melon.jpg",
+      "cantidad": 5,
+      "id": 3
+    },
+    {
+      "nombre": "sandia",
+      "precio": 2,
+      "calorias": 2,
+      "colores": [
+        "blanco",
+        "verde",
+        "rojo"
+      ],
+      "oferta": false,
+      "descuento": 0,
+      "imagen": "https://www.comenaranjas.com/images/stories/virtuemart/product/sandia-rayada.jpg",
+      "cantidad": 5,
+      "id": 4
+    },
+    {
+      "nombre": "albaricoque",
+      "precio": 3,
+      "calorias": 2,
+      "colores": [
+        "blanco",
+        "verde",
+        "amarillo"
       ],
       "oferta": true,
       "descuento": 5,
-      "imagen": "http://www.triamax.com/wp-content/uploads/2015/02/uvas.jpg",
-      "cantidad": 3,
-      "id": 1
+      "imagen": "https://www.hogarmania.com/archivos/201307/albaricoque3-xl-668x400x80xX.jpg",
+      "cantidad": 5,
+      "id": 5
+    },
+    {
+      "nombre": "coco",
+      "precio": 4,
+      "calorias": 1,
+      "colores": [
+        "blanco",
+        "verde",
+        "amarillo"
+      ],
+      "oferta": false,
+      "descuento": 0,
+      "imagen": "https://www.abc.es/media/sociedad/2016/08/05/agua-coco-propiedades2-kfwC--620x349@abc.jpg",
+      "cantidad": 5,
+      "id": 6
+    },
+    {
+      "nombre": "fresa",
+      "precio": 6,
+      "calorias": 1,
+      "colores": [
+        "blanco",
+        "verde",
+        "amarillo"
+      ],
+      "oferta": true,
+      "descuento": 10,
+      "imagen": "https://libbys.es/wordpress/wp-content/uploads/2018/05/fresas.jpg",
+      "cantidad": 5,
+      "id": 7
     }
   ]
 }

@@ -1,15 +1,34 @@
   <h2 class="text-center">Listado de Frutas</h2>
-  <div class="row justify-content-center" *ngFor="let f of frutas">       
-    <div class="col col-6">
-      <p [routerLink]="['../detalle', f.id]" class="btn btn-outline-primary btn-lg btn-block "> 
-        {{f.nombre}} 
-      </p>
-    </div>   
-    <div class="col col-1">
-      <p class="btn btn-outline-primary btn-lg" type="button" (click)="eliminar(f.id)" ><i class="far fa-trash-alt text-danger" title="eliminar"></i></p>
-    </div> 
+  
+  <div class="row justify-content-left">
+      <a type="button" class=" col col-4 btn btn-outline-success mb-5" [routerLink]="['../detalle', -1]">Crear Nueva Fruta</a>
   </div>
-  <div class="row justify-content-center">
-      <a type="button" class=" col col-7  btn btn-outline-success btn-lg" [routerLink]="['../detalle', -1]">Crear Nueva Fruta</a>
-  </div>
+
+  
+  <table class="table table-bordered text-center table-hover">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Calorias</th>
+        <th scope="col">Oferta</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+       
+      <tr class="table-info" *ngFor="let f of frutas">        
+        <td>{{f.id}}</td>
+        <td><a [routerLink]="['../detalle', f.id ]">{{f.nombre}}</a></td>
+        <td>{{f.precio}}</td>
+        <td>{{f.calorias}}</td>
+        <td *ngIf="f.oferta"> <span class="text-success">Si</span></td>
+        <td *ngIf="!f.oferta"><span class="text-danger">No</span></td>
+        
+        <td><p class="btn btn-outline-secondary"  (click)="eliminar(f.id)" ><i class="far fa-trash-alt text-danger" title="eliminar"></i></p></td>
+      </tr>
+       
+    </tbody>  
+  </table>
 
