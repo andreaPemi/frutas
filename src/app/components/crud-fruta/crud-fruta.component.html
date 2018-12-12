@@ -1,4 +1,13 @@
+<div *ngIf="mensaje" class="alert alert-success alert-dismissible fade show" role="alert">
+    {{mensaje}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+  
+  
   <h2 class="text-center">Listado de Frutas</h2>
+  <hr>
   <div class="row justify-content-between">
     <div class="col">
       <a type="button" class="btn btn-outline-success mb-5" [routerLink]="['../detalle', -1]">Crear Nueva Fruta</a>
@@ -10,8 +19,7 @@
         </div>
         <input type="text" [(ngModel)]=nombre>
       </div>
-    </div>
-    
+    </div>    
   </div>
   
   <div class="table-wrapper-scroll-y mb-5">
@@ -29,7 +37,7 @@
       </tr>
     </thead>
     <tbody>       
-      <tr class="table-info" *ngFor="let f of frutas | buscadorNombre:nombre">        
+      <tr class="table-info" *ngFor="let f of frutas | buscadorNombre:nombre">          
         <td>{{f.id}}</td>
         <td><a [routerLink]="['../detalle', f.id ]">{{f.nombre}}</a></td>
         <td>{{f.precio}}</td>

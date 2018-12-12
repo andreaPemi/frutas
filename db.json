@@ -1,9 +1,8 @@
 {
   "frutas": [
     {
-      "id": 1,
       "nombre": "Banana",
-      "precio": 3.15,
+      "precio": 3,
       "calorias": 500,
       "colores": [
         "Amarillo",
@@ -12,7 +11,8 @@
       "oferta": true,
       "descuento": 20,
       "imagen": "http://padeladdict.com/wp-content/uploads/2012/12/platano2.jpg",
-      "cantidad": 1
+      "cantidad": 1,
+      "id": 1
     },
     {
       "id": 2,
@@ -59,19 +59,19 @@
     },
     {
       "nombre": "Manzana",
-      "precio": 2.3,
+      "precio": 5,
       "calorias": 13,
-      "cantidad": 1,
-      "oferta": false,
-      "descuento": 5,
-      "imagen": "https://www.eluniversal.com.mx/sites/default/files/styles/f03-651x400/public/2016/09/07/manzana.jpg",
       "colores": [
         "Rojo",
         "Verde"
       ],
+      "oferta": false,
+      "descuento": 0,
+      "imagen": "https://www.eluniversal.com.mx/sites/default/files/styles/f03-651x400/public/2016/09/07/manzana.jpg",
+      "cantidad": 1,
       "id": 5
     },
-	{
+    {
       "nombre": "uva",
       "precio": 0.6,
       "calorias": 2,
@@ -86,7 +86,7 @@
       "cantidad": 5,
       "id": 6
     },
-	{
+    {
       "nombre": "Melon",
       "precio": 1,
       "calorias": 2,
@@ -101,7 +101,7 @@
       "cantidad": 5,
       "id": 7
     },
-	{
+    {
       "nombre": "sandia",
       "precio": 2,
       "calorias": 2,
@@ -116,7 +116,7 @@
       "cantidad": 5,
       "id": 8
     },
-	{
+    {
       "nombre": "albaricoque",
       "precio": 3,
       "calorias": 2,
@@ -131,7 +131,7 @@
       "cantidad": 5,
       "id": 9
     },
-	{
+    {
       "nombre": "coco",
       "precio": 4,
       "calorias": 1,
@@ -146,9 +146,9 @@
       "cantidad": 5,
       "id": 10
     },
-	{
+    {
       "nombre": "Granada",
-      "precio": 3.80,
+      "precio": 3.8,
       "calorias": 25,
       "colores": [
         "Rojo",
@@ -161,9 +161,9 @@
       "cantidad": 1,
       "id": 11
     },
-	{
+    {
       "nombre": "Kiwi",
-      "precio": 1.20,
+      "precio": 1.2,
       "calorias": 47,
       "colores": [
         "Marron",
@@ -175,9 +175,9 @@
       "cantidad": 1,
       "id": 12
     },
-	{
+    {
       "nombre": "Cereza",
-      "precio": 3.80,
+      "precio": 3.8,
       "calorias": 12,
       "colores": [
         "Rojo",
@@ -189,9 +189,9 @@
       "cantidad": 1,
       "id": 13
     },
-	{
+    {
       "nombre": "Frambuesa",
-      "precio": 0.40,
+      "precio": 0.4,
       "calorias": 5,
       "colores": [
         "Rosa",
@@ -203,15 +203,15 @@
       "cantidad": 1,
       "id": 14
     },
-	{
+    {
       "nombre": "Piña",
-      "precio": 4.30,
+      "precio": 4.3,
       "calorias": 100,
       "colores": [
         "Naranja",
         "Marron",
-		"Amarillo",
-		"Verde"
+        "Amarillo",
+        "Verde"
       ],
       "oferta": true,
       "descuento": 35,
@@ -219,9 +219,9 @@
       "cantidad": 1,
       "id": 15
     },
-	{
+    {
       "nombre": "Naranja",
-      "precio": 0.90,
+      "precio": 0.9,
       "calorias": 43,
       "colores": [
         "Naranja",
@@ -233,9 +233,9 @@
       "cantidad": 1,
       "id": 16
     },
-	{
+    {
       "nombre": "Mango",
-      "precio": 2.80,
+      "precio": 2.8,
       "calorias": 55,
       "colores": [
         "Rosa",
@@ -247,7 +247,7 @@
       "cantidad": 1,
       "id": 17
     },
-	{
+    {
       "nombre": "Mora",
       "precio": 0.15,
       "calorias": 2.3,
@@ -261,7 +261,7 @@
       "cantidad": 1,
       "id": 18
     },
-	{
+    {
       "nombre": "Limon",
       "precio": 1.05,
       "calorias": 36,
@@ -275,17 +275,17 @@
       "cantidad": 1,
       "id": 19
     },
-	{
+    {
       "nombre": "Higo",
-      "precio": 0.75,
+      "precio": 1,
       "calorias": 2.3,
       "colores": [
         "Morado",
         "Rojo",
-		"Amarillo"
+        "Amarillo"
       ],
       "oferta": false,
-      "descuento": 5,
+      "descuento": 0,
       "imagen": "https://biotrendies.com/wp-content/uploads/2015/06/Higos.jpg",
       "cantidad": 1,
       "id": 20

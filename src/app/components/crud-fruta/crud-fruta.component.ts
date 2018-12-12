@@ -11,9 +11,11 @@ import { ActivatedRoute } from '@angular/router';
 export class CrudFrutaComponent implements OnInit {
 
   frutas:Fruta[];  
+  mensaje:string;
 
   constructor(public frutaService:FrutaService ,private route: ActivatedRoute) { 
     this.frutas=[];
+    this.mensaje='';
   }
 
   ngOnInit() {
@@ -25,7 +27,7 @@ export class CrudFrutaComponent implements OnInit {
 
     this.frutaService.getAll().subscribe(data => {
       console.log('Datos recibidos $%o', data);
-      this.frutas = data.map(el => el);
+      this.frutas = data.map(el => el);      
     });
 
   }
@@ -35,6 +37,7 @@ export class CrudFrutaComponent implements OnInit {
     this.frutaService.delete(id).subscribe(data =>{
       console.log('data %o', data);
       this.cargarLista();
+      this.mensaje="Fruta eliminada correctamente";
       });
 
   }

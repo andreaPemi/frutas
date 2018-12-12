@@ -7,11 +7,11 @@ import { Fruta } from '../model/fruta';
 export class BuscadorNombrePipe implements PipeTransform {
 
   transform(value: any, nombre: string): any {
-    
+    let mensaje:string;
     if(nombre != undefined){
-      return value.filter(el=>el.nombre.toLocaleLowerCase().indexOf(nombre)!= -1);
+      return value.filter(el=>el.nombre.toLocaleLowerCase().indexOf(nombre)!= -1);      
     }else{
-      return value;
+      return value;      
     }
     
   }

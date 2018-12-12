@@ -61,11 +61,7 @@ export class DetalleFrutaComponent implements OnInit {
           }
 
         });
-      } else {
-        //formulario por defecto
-        this.vaciarCamposForm();
-      }
-
+      } 
     });
   }
 
@@ -131,8 +127,7 @@ export class DetalleFrutaComponent implements OnInit {
 
       this.frutaService.update(fruta).subscribe(data => {
         //console.debug(data);
-
-        this.vaciarCamposForm();
+       
         this.alert = fruta.nombre + " modificada correctamente";
 
       });
@@ -174,16 +169,4 @@ export class DetalleFrutaComponent implements OnInit {
     }
 
   }
-
-  vaciarCamposForm() {
-    this.formulario.controls.nombre.setValue("");
-    this.formulario.controls.precio.setValue(0);
-    this.formulario.controls.calorias.setValue(0);
-    this.formulario.controls.colores.setValue([{color: ''}]);
-    this.formulario.controls.oferta.setValue(false);
-    this.formulario.controls.descuento.setValue(5);
-    this.formulario.controls.imagen.setValue("");
-    this.formulario.controls.cantidad.setValue(1);
-  }
-
 }
