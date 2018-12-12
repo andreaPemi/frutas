@@ -1,5 +1,8 @@
 # Frutas
-Proyecto que recoge todo lo aprendido de angular.
+Este proyecto esta generado con 
+ [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.
+
+Recoge todo lo aprendido con angular:
 * Componentes.
 * Clases.
 * Servicios.
@@ -15,23 +18,18 @@ si te logueas, una de las opciones es acceder a la tabla de fruta, donde se pued
 
 Y por ultimo como hemos iniciado sesion, nos aparece el botón de cerrar sesion.
 
-
-# Vamos al lío
-
-## Development server
-Este proyecto esta generado con 
- [Angular CLI](https://github.com/angular/angular-cli) version 7.1.0.
+## Pasos para lanzar la APP
 
 Accedemos a la carpeta donde tenemos guardado el proyecto desde la `consola de comandos`.
 
 Lanzamos este comando `ng serve`. y podemos visualizar la app en   **http: // localhost: 4200 /**. 
 
-Para cargar el array de frutas lanzamos el siguiente comando desde otra consola `json-server --watch db.json`.
+Para cargar el array de frutas lanzamos el siguiente comando desde otra consola `json-server --watch db.json` y podemos visualizar la app en   **http: // localhost: 3000 /** 
 
-La aplicación se volverá a cargar automáticamente si cambia alguno de los archivos de origen.
+Si tenemos alguna duda se puede consultar en 
+[json-server](https://github.com/typicode/json-server)
 
-
-## Code scaffolding
+## Generar componentes
 Ejecute `ng generate component component-name` para generar un nuevo componente. También puede usar `ng generate directive|pipe|service|class|guard|interface|enum|module.`
 
 ## Build
