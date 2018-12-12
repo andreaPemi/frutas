@@ -181,7 +181,7 @@ export class DetalleFrutaComponent implements OnInit {
     this.formulario.controls.calorias.setValue(0);
     this.formulario.controls.colores.setValue([{color: ''}]);
     this.formulario.controls.oferta.setValue(false);
-    this.formulario.controls.descuento.setValue(0);
+    this.formulario.controls.descuento.setValue(5);
     this.formulario.controls.imagen.setValue("");
     this.formulario.controls.cantidad.setValue(1);
   }

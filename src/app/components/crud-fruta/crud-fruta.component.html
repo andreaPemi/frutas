@@ -1,15 +1,19 @@
   <h2 class="text-center">Listado de Frutas</h2>
-  
-  <div class="row justify-content-left">
-      <a type="button" class=" col col-4 btn btn-outline-success mb-5" [routerLink]="['../detalle', -1]">Crear Nueva Fruta</a>
-  </div>
-
-  <div class="input-group">
-      <div class="input-group-prepend">
-        <span class="input-group-text" id="basic-addon1">LUPA</span>
-      </div>
-      <input type="text" [(ngModel)]=nombre>
+  <div class="row justify-content-between">
+    <div class="col">
+      <a type="button" class="btn btn-outline-success mb-5" [routerLink]="['../detalle', -1]">Crear Nueva Fruta</a>
     </div>
+    <div class="col">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+        </div>
+        <input type="text" [(ngModel)]=nombre>
+      </div>
+    </div>
+    
+  </div>
+  
   
   <table class="table table-bordered text-center table-hover">
     <thead class="thead-dark">
