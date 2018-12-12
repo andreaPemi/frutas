@@ -69,8 +69,12 @@ export class ComparadorComponent implements OnInit {
     console.debug("Parametro frutaClick= %o" ,event['frutaClick']);
    
     this.frutaCompra = event['frutaClick'];
-    this.totalCompra += this.frutaCompra.precio * this.cant;
-
+    //this.totalCompra += this.frutaCompra.precio * this.cant;
+    if(this.frutaCompra.oferta){
+      this.totalCompra = this.totalCompra + (this.frutaCompra.precio - ((this.frutaCompra.precio * this.frutaCompra.descuento)/100));
+    }else{
+      this.totalCompra = this.totalCompra + (this.frutaCompra.precio * this.frutaCompra.cantidad);  
+    }
     //Buscamos la fruta en el array
     this.frutaBuscar=this.productos.find(el => el.nombre===this.frutaCompra.nombre);
     
@@ -94,19 +98,38 @@ export class ComparadorComponent implements OnInit {
     if ( p.cantidad > 1 ){
       p.cantidad--;
       this.productos[i] = p;
-      this.totalCompra -= p.precio * this.cant;
-
+      if(p.oferta){
+        this.totalCompra = this.totalCompra - (p.precio - ((p.precio * p.descuento)/100));
+      }else{
+        this.totalCompra = this.totalCompra - p.precio ;  
+      }
+    }else if(p.cantidad == 1){
+      if(p.oferta){
+        this.totalCompra = this.totalCompra - (p.precio - ((p.precio * p.descuento)/100));
+      }else{
+        this.totalCompra = this.totalCompra - p.precio ;  
+      }
     }
   }
 
   cantidadSuma(p: Fruta, i: number){
     p.cantidad++;
     this.productos[i] = p;
-    this.totalCompra += p.precio * this.cant;
+    //this.totalCompra += p.precio * this.cant;
+    if(p.oferta){
+      this.totalCompra = this.totalCompra + (p.precio - ((p.precio * p.descuento)/100));
+    }else{
+      this.totalCompra = this.totalCompra + p.precio ;  
+    }
   }
 
   eliminarProducto(p: Fruta, index: number){
-    this.totalCompra = this.totalCompra - (p.precio * p.cantidad);    
+    if(p.oferta){
+      this.totalCompra = this.totalCompra -((p.precio - ((p.precio *p.descuento)/100))*p.cantidad);
+    }else{
+      this.totalCompra = this.totalCompra - (p.precio * p.cantidad);  
+    }
+     
     p.cantidad = 1;    
     let posicion: number;
     posicion = this.productos.indexOf(p);

@@ -12,7 +12,7 @@
       "oferta": true,
       "descuento": 20,
       "imagen": "http://padeladdict.com/wp-content/uploads/2012/12/platano2.jpg",
-      "cant": 1
+      "cantidad": 1
     },
     {
       "id": 2,
@@ -26,7 +26,7 @@
       "oferta": false,
       "descuento": 5,
       "imagen": "http://www.cajanature.com/405-large_default/pera-ecologica-.jpg",
-      "cant": 1
+      "cantidad": 1
     },
     {
       "id": 3,
@@ -41,13 +41,13 @@
       "oferta": true,
       "descuento": 15,
       "imagen": "http://libbys.es/wordpress/wp-content/uploads/2018/05/fresas.jpg",
-      "cant": 1
+      "cantidad": 1
     },
     {
       "nombre": "Melocoton",
       "precio": 0.75,
       "calorias": 5,
-      "cant": 1,
+      "cantidad": 1,
       "oferta": true,
       "descuento": 10,
       "imagen": "https://www.frutadelasarga.com/server/Portal_0008706/img/products/melocoton-de-cieza_1677407.jpg",
@@ -61,7 +61,7 @@
       "nombre": "Manzana",
       "precio": 2.3,
       "calorias": 13,
-      "cant": 1,
+      "cantidad": 1,
       "oferta": false,
       "descuento": 5,
       "imagen": "http://www.redagricola.com/cl/assets/uploads/2017/08/manazana-792x591-c-default.jpg",

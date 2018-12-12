@@ -41,7 +41,9 @@
             <div class="mt-2" *ngFor="let p of productos, let i = index">
               <p class="text-center" (click)="eliminarProducto(p,i)">
                 <i class="far fa-trash-alt text-danger" title="eliminar"></i>
-                <b class="ml-2">{{p.nombre}} {{p.precio}}&euro;</b>
+                <b class="ml-2" *ngIf="p.oferta">{{p.nombre}} {{p.precio-(p.precio*p.descuento)/100}}&euro;</b>
+                <b class="ml-2" *ngIf="!p.oferta">{{p.nombre}} {{p.precio}}&euro;</b>
+
               </p>
     
               <p class="card-text">
@@ -58,7 +60,7 @@
                   <input type="number" size="2" readonly class="form-control text-center" value="{{p.cantidad}}">
                 </div>
                 <div class="col-2">
-                  <button class="btn btn-outline-success" type="button" (click)="cantidadResta(p,i)" title="Quitar producto al carro">
+                  <button [disabled]="p.cantidad==1" class="btn btn-outline-success" type="button" (click)="cantidadResta(p,i)" title="Quitar producto al carro">
                     <b>-</b>
                   </button>
                 </div>
