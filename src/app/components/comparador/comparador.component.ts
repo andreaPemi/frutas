@@ -73,7 +73,7 @@ export class ComparadorComponent implements OnInit {
     if(this.frutaCompra.oferta){
       this.totalCompra = this.totalCompra + (this.frutaCompra.precio - ((this.frutaCompra.precio * this.frutaCompra.descuento)/100));
     }else{
-      this.totalCompra = this.totalCompra + (this.frutaCompra.precio * this.frutaCompra.cantidad);  
+      this.totalCompra = this.totalCompra + this.frutaCompra.precio;  
     }
     //Buscamos la fruta en el array
     this.frutaBuscar=this.productos.find(el => el.nombre===this.frutaCompra.nombre);
@@ -135,12 +135,6 @@ export class ComparadorComponent implements OnInit {
     posicion = this.productos.indexOf(p);
 
     this.productos.splice(posicion , 1);
-  }
-
-  cancelarCompra(){
-    this.productos=[];
-    this.totalCompra=0;
-  }
-  
+  }  
 
 }

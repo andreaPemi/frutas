@@ -26,6 +26,9 @@ import { BackofficeGuard } from './guards/backoffice.guard';
 import { OfertaPipe } from './pipes/oferta.pipe';
 import { BuscadorNombrePipe } from './pipes/buscador-nombre.pipe';
 
+//Directivas
+import { DestacarDirective } from './directives/destacar.directive';
+
 @NgModule({
   declarations: [
     AppComponent,    
@@ -38,7 +41,8 @@ import { BuscadorNombrePipe } from './pipes/buscador-nombre.pipe';
     BackofficeComponent,
     LoginComponent,
     OfertaPipe,
-    BuscadorNombrePipe
+    BuscadorNombrePipe,
+    DestacarDirective
     
   ],
   imports: [
