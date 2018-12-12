@@ -14,7 +14,7 @@
     
   </div>
   
-  
+  <div class="table-wrapper-scroll-y mb-5">
   <table class="table table-bordered text-center table-hover">
     <thead class="thead-dark">
       <tr>
@@ -23,11 +23,12 @@
         <th scope="col">Precio</th>
         <th scope="col">Calorias</th>
         <th scope="col">Oferta</th>
+        <th scope="col">Descuento</th>
+        <th scope="col">Imagen</th>
         <th scope="col"></th>
       </tr>
     </thead>
-    <tbody>
-       
+    <tbody>       
       <tr class="table-info" *ngFor="let f of frutas | buscadorNombre:nombre">        
         <td>{{f.id}}</td>
         <td><a [routerLink]="['../detalle', f.id ]">{{f.nombre}}</a></td>
@@ -35,10 +36,14 @@
         <td>{{f.calorias}}</td>
         <td *ngIf="f.oferta"> <span class="text-success">Si</span></td>
         <td *ngIf="!f.oferta"><span class="text-danger">No</span></td>
-        
+        <td *ngIf="!f.oferta"><span>-</span></td>
+        <td *ngIf="f.oferta"><span>{{f.descuento}}</span></td>
+        <td><img class="border mx-auto" style="width:100px" src="{{f.imagen}}" alt="imagen fruta"/></td>
+
         <td><p class="btn btn-outline-secondary"  (click)="eliminar(f.id)" ><i class="far fa-trash-alt text-danger" title="eliminar"></i></p></td>
+      
       </tr>
        
     </tbody>  
   </table>
-
+</div>
